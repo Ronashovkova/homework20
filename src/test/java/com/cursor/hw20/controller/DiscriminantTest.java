@@ -1,6 +1,7 @@
 package com.cursor.hw20.controller;
 
 import com.cursor.hw20.service.DiscriminantCalculating;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ class DiscriminantTest {
         //WHEN
 
         //THEN
+        Assert.assertNotNull(discriminantService);
+
         double actualResult = discriminantService.calculateDiscriminant(a, b, c);
 
         assertEquals(expectedResult, actualResult);
